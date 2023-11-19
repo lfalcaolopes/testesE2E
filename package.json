@@ -1,0 +1,14 @@
+{
+  "name": "testese2e",
+  "version": "1.0.0",
+  "description": "desenvolvendo testes end to end para projeto da faculdade",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.5.1"
+  }
+}
