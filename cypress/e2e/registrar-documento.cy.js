@@ -2,7 +2,7 @@ describe("testes de cadastro de usuario e login", () => {
   beforeEach(() => {
     //ARRANGE
     //cy.visit("https://driveoas.vercel.app/");
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://driveoas.vercel.app/");
 
     cy.get("a").contains("Entrar").click();
     cy.get("a").contains("Login").click();
@@ -25,14 +25,14 @@ describe("testes de cadastro de usuario e login", () => {
 
     // ASSERT
     cy.get("a").contains("Meus arquivos").click();
-    cy.url().should('eq', 'http://localhost:5173/dashboard/myFiles');
+    cy.url().should('eq', 'https://driveoas.vercel.app/dashboard/myFiles');
     cy.get('[id="documento"]').should("have.length", 3);
   });
 
   it("Remover um documento", () => {
     //ARRANGE
     cy.get("a").contains("Meus arquivos").click();
-    cy.url().should('eq', 'http://localhost:5173/dashboard/myFiles');
+    cy.url().should('eq', 'https://driveoas.vercel.app/dashboard/myFiles');
     cy.get('[id="documento"]').should("have.length", 2);
 
     //ACT

@@ -1,6 +1,6 @@
 describe("testes de cadastro de usuario e login", () => {
     beforeEach(() => {
-      cy.visit("http://localhost:5173/");
+      cy.visit("https://driveoas.vercel.app/");
       
     });
   

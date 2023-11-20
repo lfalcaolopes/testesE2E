@@ -1,8 +1,7 @@
 describe("testes de cadastro de usuario e login", () => {
   beforeEach(() => {
     //ARRANGE
-    //cy.visit("https://driveoas.vercel.app/");
-    cy.visit("http://localhost:5173/");
+    cy.visit("https://driveoas.vercel.app/");
     cy.wait(1000);
   });
 
@@ -23,7 +22,7 @@ describe("testes de cadastro de usuario e login", () => {
     cy.wait(1000);
 
     // ASSERT
-    cy.url().should("eq", "http://localhost:5173/dashboard");
+    cy.url().should("eq", "https://driveoas.vercel.app/dashboard");
   });
 
   it("Fazer login com usuario recem cadastrado", () => {
@@ -42,7 +41,7 @@ describe("testes de cadastro de usuario e login", () => {
     cy.wait(1000);
 
     // ASSERT
-    cy.url().should("eq", "http://localhost:5173/dashboard");
+    cy.url().should("eq", "https://driveoas.vercel.app/dashboard");
   });
 
   it("Fazer login com usuario invalido", () => {
@@ -57,7 +56,7 @@ describe("testes de cadastro de usuario e login", () => {
     cy.wait(1000);
     
     // ASSERT
-    cy.url().should("not.eq", "http://localhost:5173/dashboard");
+    cy.url().should("not.eq", "https://driveoas.vercel.app/dashboard");
     cy.on("window:alert", (textoAlerta) => {
       expect(textoAlerta).to.equal("Email ou senha devem estar incorrretos!");
     });
